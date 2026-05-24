@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+
+# Environment variables — NEVER commit secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# dbt
+dbt/uk_energy/target/
+dbt/uk_energy/dbt_packages/
+dbt/uk_energy/logs/
+dbt/uk_energy/.user.yml
+
+# dbt docs generated site (large, regenerate with `dbt docs generate`)
+dbt/uk_energy/docs/
+
+# Supabase
+.supabase/
+
+# Raw data — bronze layer lives in Supabase, not in git
+data/
+*.json
+*.csv.gz
+*.parquet
+
+# Exception: seed CSV files ARE committed to git
+!dbt/uk_energy/seeds/*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+
+# DuckDB local files
+*.duckdb
+*.duckdb.wal
